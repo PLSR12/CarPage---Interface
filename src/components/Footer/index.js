@@ -9,6 +9,7 @@ export function Footer () {
         <div class='mais-info'>
           <div>
             <div>
+              
             </div>
           </div>
           <div>

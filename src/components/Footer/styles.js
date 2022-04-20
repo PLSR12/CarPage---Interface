@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  footer {
-    background-color: #000;
-    margin-top: 0 auto;
-    flex-direction: column;
-  }
+  background-color: #000;
+  margin-top: 0 auto;
+
   .mais-info {
     width: fit-content;
     height: fit-content;
@@ -13,7 +11,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
     padding: 50px 0px;
     word-break: break-word;
     flex-wrap: wrap;

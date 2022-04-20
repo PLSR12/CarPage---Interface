@@ -2,13 +2,15 @@ import React from 'react'
 
 import { Container } from './styles'
 
-function Home () {
-    return(
-        <Container>
-            tey
-        </Container>
+import { Header, Banner } from '../../components'
 
-    )
+function Home () {
+  return (
+    <Container>
+      <Header />
+      <Banner />
+    </Container>
+  )
 }
 
 export default Home

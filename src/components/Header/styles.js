@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   height: 9vh;
-  background-color: #ffffff;
+  background-color: #000;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -34,6 +34,7 @@ export const PageLink = styled.a`
   text-decoration: none;
   font-size: 1rem;
   line-height: 19px;
+  color:white;
 `
 export const Line = styled.div`
   height: 4vh;

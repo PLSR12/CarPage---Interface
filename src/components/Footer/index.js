@@ -8,9 +8,7 @@ export function Footer () {
       <footer id='contato'>
         <div className='mais-info'>
           <div>
-            <div>
-              
-            </div>
+            <div></div>
           </div>
           <div>
             <div>
@@ -28,7 +26,7 @@ export function Footer () {
             </div>
             <div>
               <a href='http://' target='_blank' rel='noopener noreferrer'>
-                Ramos, Rio de Janeiro
+                Barra da Tijuca, Rio de Janeiro
               </a>
             </div>
           </div>

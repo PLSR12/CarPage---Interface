@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -15,10 +14,18 @@ export const Container = styled.div`
 export const ContainerLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 4vh;
+  gap: 3vh;
+
+  button{
+    background-color:black;
+    outline:none;
+    border: none;
+    cursor: pointer;
+    max-width: 22vh;
+  }
 
   img {
-      max-width:22vh;
+    max-width: 22vh;
   }
 `
 
@@ -34,9 +41,10 @@ export const PageLink = styled.a`
   text-decoration: none;
   font-size: 1rem;
   line-height: 19px;
-  color:white;
+  color: ${props => (props.isActive ? 'red' : 'white')};
+  font-weight: ${props => (props.isActive ? 'bold' : 'normal')};
 `
 export const Line = styled.div`
   height: 4vh;
-  border: 0.5px solid red;
+  border: 0.5px solid white;
 `

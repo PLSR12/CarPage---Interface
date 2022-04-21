@@ -3,13 +3,14 @@ import styled from 'styled-components'
 export const ContainerCard = styled.div`
   display: flex;
   flex-flow: row wrap;
-  width: 45vw;
+  width: 50vw;
+  min-width: 55vw;
   height: max-content;
   padding: 10px;
   background-color: #fff;
   border: 1px solid #cfd9e6;
   border-radius: 5px;
-  margin: 0 0 15px;
+  margin: 0 auto;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
   transition: all 0.2s ease-in-out;
   cursor: pointer;

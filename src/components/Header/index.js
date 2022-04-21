@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useHistory } from 'react-router-dom'
+
 import Logo from '../../assets/logo_super_carros.png'
 
 import {
@@ -11,15 +13,32 @@ import {
 } from './styles'
 
 export function Header () {
+  const {
+    push,
+    location: { pathname }
+  } = useHistory()
+
   return (
     <Container>
       <ContainerLeft>
-        <img src={Logo} alt='Logo' />
+        <button onClick={() => push('/')}>
+          <img src={Logo} alt='Logo' />
+        </button>
       </ContainerLeft>
       <ContainerRight>
-        <PageLink>Carros</PageLink>
+        <PageLink
+          onClick={() => push('/carros')}
+          isActive={pathname === '/carros'}
+        >
+          Carros
+        </PageLink>
         <Line> </Line>
-        <PageLink>Motos</PageLink>
+        <PageLink
+          onClick={() => push('/motos')}
+          isActive={pathname === '/motos'}
+        >
+          Motos
+        </PageLink>
       </ContainerRight>
     </Container>
   )

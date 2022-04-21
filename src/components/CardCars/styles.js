@@ -29,7 +29,7 @@ export const ContainerText = styled.div`
   flex-direction: column;
   max-width: 350px;
   color: #686f79;
-  padding: 10px 0 0 20px;
+  padding: 5px 0 0 20px;
   div {
     display: flex;
     flex-flow: row wrap;

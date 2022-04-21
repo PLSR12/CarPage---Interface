@@ -4,7 +4,7 @@ import { Container, ContainerInfo } from './styles'
 
 import { Header, Banner, Footer } from '../../components'
 
-function Home () {
+export function Home () {
   return (
     <Container>
       <Header />
@@ -37,5 +37,3 @@ function Home () {
     </Container>
   )
 }
-
-export default Home

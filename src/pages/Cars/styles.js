@@ -12,7 +12,7 @@ export const BrandsMenu = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 3vw;
-  margin-top: 3vh;
+  margin-top: 5vh;
 `
 
 export const BrandButton = styled.button`
@@ -32,6 +32,6 @@ export const CarsContainer = styled.div`
   flex-wrap: wrap;
   justify-content:center;
   align-items: center;
-  gap: 3vw;
+  gap: 5vw;
   padding: 4vw;
 `

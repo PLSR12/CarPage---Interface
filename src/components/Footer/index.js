@@ -6,7 +6,7 @@ export function Footer () {
   return (
     <Container>
       <footer id='contato'>
-        <div class='mais-info'>
+        <div className='mais-info'>
           <div>
             <div>
               
@@ -47,7 +47,7 @@ export function Footer () {
               <div>
                 <h1>Redes Sociais</h1>
               </div>
-              <div class='redes'>
+              <div className='redes'>
                 <div>
                   <a href=''>
                     <svg
@@ -78,7 +78,7 @@ export function Footer () {
           </div>
         </div>
 
-        <h3> Real Leopoldina &copy; Todos os Direitos Reservados!</h3>
+        <h3> SuperCarros &copy; Todos os Direitos Reservados!</h3>
       </footer>
     </Container>
   )

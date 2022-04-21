@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { Container, BrandsMenu, BrandButton, CarsContainer } from './styles'
 
-import { Header, Banner, CardCars } from '../../components'
+import { Header, Banner, CardCars, Footer } from '../../components'
 
 import formatCurrency from '../../utils/formatCurrency'
 
@@ -50,9 +50,7 @@ export function Cars ({ location: { state } }) {
     if (activeBrands === 0) {
       setFilteredCars(cars)
     } else {
-      const newFilteredCars = cars.filter(
-        car => car.brand_id === activeBrands
-      )
+      const newFilteredCars = cars.filter(car => car.brand_id === activeBrands)
 
       setFilteredCars(newFilteredCars)
     }
@@ -80,6 +78,7 @@ export function Cars ({ location: { state } }) {
         {filteredCars &&
           filteredCars.map(car => <CardCars key={car.id} car={car} />)}
       </CarsContainer>
+      <Footer />
     </Container>
   )
 }

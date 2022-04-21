@@ -47,7 +47,7 @@ export function Footer () {
               </div>
               <div className='redes'>
                 <div>
-                  <a href=''>
+                  <a href='https://instagram.com/realleopoldina.f.c/'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       fill='currentColor'

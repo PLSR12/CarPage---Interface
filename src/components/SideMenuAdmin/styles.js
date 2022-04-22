@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
-  background-color: #3c3c3c;
+  background-color: #EB1101;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
   width: 19vw;
   margin-top: 0;
@@ -17,7 +17,7 @@ export const ItemContainer = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
-  background: ${props => props => (props.isActive ? '#565656' : '')};
+  background: ${props => props => (props.isActive ? 'black' : '')};
   border-radius: 2px;
   margin: 8px;
   padding-left: 20px;

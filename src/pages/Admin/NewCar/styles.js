@@ -11,7 +11,7 @@ export const Container = styled.div`
   form {
     background-color: #000;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -39,7 +39,7 @@ export const ButtonStyle = styled(Button)`
   font-weight: bold;
   font-size: 1.2rem;
   margin-top: 25px;
-  background-color: #EB1101;
+  background-color: #eb1101;
 `
 export const LabelUpload = styled.label`
   cursor: pointer;

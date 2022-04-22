@@ -10,7 +10,7 @@ import EditCar from './EditCar'
 import { SideMenuAdmin } from '../../components'
 import paths from '../../constants/paths'
 
-export function Admin({ match: { path } }) {
+export function Admin ({ match: { path } }) {
   return (
     <Container>
       <SideMenuAdmin path={path} />
@@ -18,7 +18,6 @@ export function Admin({ match: { path } }) {
         {path === paths.Cars && <ListCars />}
         {path === paths.NewCar && <NewCar />}
         {path === paths.EditCar && <EditCar />}
-
       </ContainerItems>
     </Container>
   )

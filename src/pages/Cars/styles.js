@@ -11,7 +11,7 @@ export const BrandsMenu = styled.div`
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3vw;
+  gap: 5vw;
   margin-top: 5vh;
 `
 
@@ -23,15 +23,15 @@ export const BrandButton = styled.button`
   color: ${props => (props.isActiveBrand ? 'red' : '#000')};
   font-size: 1rem;
   line-height: 22px;
-  padding-bottom: 5px;
 `
 
 
 export const CarsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content:center;
   align-items: center;
   gap: 5vw;
-  padding: 4vw;
+  padding: 3vw;
 `

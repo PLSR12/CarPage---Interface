@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
 
   form {
-    background-color: #565656;
+    background-color: #EB1101;
     border-radius: 10px;
     padding: 30px;
     display: flex;
@@ -37,6 +37,7 @@ export const Input = styled.input`
 export const ButtonStyle = styled(Button)`
   width: 100%;
   margin-top: 25px;
+  background-color:black;
 `
 export const LabelUpload = styled.label`
   cursor: pointer;

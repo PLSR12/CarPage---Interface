@@ -27,7 +27,7 @@ export function CardCars ({ car }) {
         <div>
           <CarYear> {car.year}</CarYear>
           <CarTrasmission> {car.transmission} </CarTrasmission>
-          <CarMileage> {car.mileage} Km </CarMileage>
+          <CarMileage> {car.mileage}Km </CarMileage>
           <CarFuel> {car.fuel} </CarFuel>
         </div>
         <CarPrice> {car.formatedPrice}</CarPrice>

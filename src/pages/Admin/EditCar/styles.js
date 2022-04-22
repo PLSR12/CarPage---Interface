@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Button } from '../../../components'
+import CloudUploadIcon from '@mui/icons-material/CloudUpload'
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
 
   form {
-    background-color: #565656;
+    background-color: #000;
     border-radius: 10px;
     padding: 30px;
     display: flex;
@@ -29,13 +30,17 @@ export const Input = styled.input`
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  padding-left: 10px;
   outline: none;
   border: none;
 `
 
 export const ButtonStyle = styled(Button)`
   width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
   margin-top: 25px;
+  background-color: #EB1101;
 `
 export const LabelUpload = styled.label`
   cursor: pointer;
@@ -45,20 +50,14 @@ export const LabelUpload = styled.label`
   padding: 15px;
   gap: 5px;
   align-items: center;
+  color: white;
 
   input {
     width: 1px;
     opacity: 0;
   }
 `
-export const ContainerInput = styled.div`
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
 
-  input{
-    width: 15px;
-    height: 15px;
-    cursor:pointer;
-  }
+export const CloudUploadIconStyle = styled(CloudUploadIcon)`
+  color: white;
 `

@@ -9,12 +9,12 @@ export const Container = styled.div`
   align-items: center;
 
   form {
-    background-color: #EB1101;
+    background-color: #000;
     border-radius: 10px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap:25px;
+    gap: 25px;
   }
 `
 export const Label = styled.p`
@@ -36,8 +36,10 @@ export const Input = styled.input`
 
 export const ButtonStyle = styled(Button)`
   width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
   margin-top: 25px;
-  background-color:black;
+  background-color: #EB1101;
 `
 export const LabelUpload = styled.label`
   cursor: pointer;
@@ -47,6 +49,7 @@ export const LabelUpload = styled.label`
   padding: 15px;
   gap: 5px;
   align-items: center;
+  color: #ffff;
 
   input {
     width: 1px;

@@ -5,9 +5,9 @@ import ReactSelect from 'react-select'
 import { toast } from 'react-toastify'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
-import CloudUploadIcon from '@mui/icons-material/CloudUpload'
 
 import api from '../../../services/api'
+import formatCurrency from '../../../utils/formatCurrency'
 
 import { ErrorMessage } from '../../../components'
 
@@ -17,45 +17,54 @@ import {
   Input,
   ButtonStyle,
   LabelUpload,
-  ContainerInput
+  CloudUploadIconStyle
 } from './styles'
 
-function EditProduct () {
+function EditCar () {
   const [fileName, setFileName] = useState(null)
-  const [categories, setCategories] = useState([])
+  const [brands, setBrands] = useState([])
   const {
     push,
     location: {
-      state: { product }
+      state: { car }
     }
   } = useHistory()
 
   const onSubmit = async data => {
-    const productDataFormData = new FormData()
+    const carDataFormData = new FormData()
 
-    productDataFormData.append('name', data.name)
-    productDataFormData.append('price', data.price)
-    productDataFormData.append('category_id', data.category.id)
-    productDataFormData.append('offer', data.offer)
+    carDataFormData.append('name', data.name)
+    carDataFormData.append('description', data.description)
+    carDataFormData.append('year', data.year)
+    carDataFormData.append('transmission', data.transmission)
+    carDataFormData.append('mileage', data.mileage)
+    carDataFormData.append('fuel', data.fuel)
+    carDataFormData.append('price', data.price)
+    carDataFormData.append('brand_id', data.brand.id)
+    carDataFormData.append('file', data.file[0])
 
-    await toast.promise(
-      api.put(`products/${product.id}`, productDataFormData),
-      {
-        success: 'Produto editado com sucesso',
-        error: 'Falha ao editar o produto'
-      }
-    )
+    await toast.promise(api.put(`cars/${car.id}`, carDataFormData), {
+      success: 'Carro criado com sucesso',
+      error: 'Falha ao criar o carro'
+    })
 
     setTimeout(() => {
-      push('/listar-produtos')
+      push('/listar-carros')
     }, 2000)
   }
 
   const schema = Yup.object().shape({
-    name: Yup.string().required('O name é obrigatório'),
-    price: Yup.string().required('O preço é obrigátoria'),
-    category: Yup.object().required('Escolha uma categoria'),
-    offer: Yup.boolean()
+    name: Yup.string().required('O nome é obrigatório'),
+    description: Yup.string().required('A descrição é obrigatória'),
+    year: Yup.string().required('O ano é obrigatório'),
+    transmission: Yup.string().required('O câmbio é obrigatório'),
+    mileage: Yup.string().required('A quilometragem é obrigatório'),
+    fuel: Yup.string().required('O combustível é obrigatório'),
+    price: Yup.string().required('O preço é obrigátorio'),
+    brand: Yup.object().required('Escolha uma marca'),
+    file: Yup.mixed().test('required', 'Carregue uma imagem', value => {
+      return value && value.length > 0
+    })
   })
 
   const {
@@ -66,32 +75,65 @@ function EditProduct () {
   } = useForm({ resolver: yupResolver(schema) })
 
   useEffect(() => {
-    async function loadCategories () {
-      const { data } = await api.get('categories')
+    async function loadBrands () {
+      const { data } = await api.get('brands')
 
-      setCategories(data)
+      setBrands(data)
     }
-    loadCategories()
+    loadBrands()
   }, [])
 
   return (
     <Container>
-      <form noValidate onSubmit={handleSubmit(onSubmit)}>
+      <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Label>Nome:</Label>
+          <Input type='text' defaultValue={car.name} {...register('name')} />
+          <ErrorMessage>{errors.name?.message}</ErrorMessage>
+        </div>
+        <div>
+          <Label>Descrição:</Label>
           <Input
             type='text'
-            {...register('name')}
-            defaultValue={product.name}
+            defaultValue={car.description}
+            {...register('description')}
           />
-          <ErrorMessage>{errors.name?.message}</ErrorMessage>
+          <ErrorMessage>{errors.description?.message}</ErrorMessage>
+        </div>
+        <div>
+          <Label>Câmbio:</Label>
+          <Input
+            type='text'
+            defaultValue={car.transmission}
+            {...register('transmission')}
+          />
+          <ErrorMessage>{errors.transmission?.message}</ErrorMessage>
+        </div>
+        <div>
+          <Label>Ano:</Label>
+          <Input type='text' defaultValue={car.year} {...register('year')} />
+          <ErrorMessage>{errors.year?.message}</ErrorMessage>
+        </div>
+        <div>
+          <Label>Quilometragem:</Label>
+          <Input
+            type='text'
+            defaultValue={car.mileage}
+            {...register('mileage')}
+          />
+          <ErrorMessage>{errors.mileage?.message}</ErrorMessage>
+        </div>
+        <div>
+          <Label>Combustível:</Label>
+          <Input type='text' defaultValue={car.fuel} {...register('fuel')} />
+          <ErrorMessage>{errors.fuel?.message}</ErrorMessage>
         </div>
         <div>
           <Label> Preço </Label>
           <Input
             type='number'
+            defaultValue={car.price}
             {...register('price')}
-            defaultValue={product.price}
           />
           <ErrorMessage>{errors.price?.message}</ErrorMessage>
         </div>
@@ -99,13 +141,12 @@ function EditProduct () {
           <LabelUpload>
             {fileName || (
               <>
-                <CloudUploadIcon />
+                <CloudUploadIconStyle />
                 Caregue a imagem do produto
               </>
             )}
             <input
               type='file'
-              accept='image/png , image/jpeg'
               {...register('file')}
               onChange={value => {
                 setFileName(value.target.files[0]?.name)
@@ -116,37 +157,27 @@ function EditProduct () {
         </div>
         <div>
           <Controller
-            name='category'
+            name='brand'
             control={control}
-            defaultValue={product.category}
             render={({ field }) => {
               return (
                 <ReactSelect
                   {...field}
-                  options={categories}
-                  getOptionLabel={cat => cat.name}
-                  getOptionValue={cat => cat.id}
-                  defaultValue={product.category}
+                  options={brands}
+                  getOptionLabel={brd => brd.name}
+                  getOptionValue={brd => brd.id}
+                  placeholder='Escolha uma marca'
+                  defaultValue={car.brand}
                 />
               )
             }}
           ></Controller>
-          <ErrorMessage>{errors.category?.message}</ErrorMessage>
+          <ErrorMessage>{errors.brand?.message}</ErrorMessage>
         </div>
-
-        <ContainerInput>
-          <input
-            type='checkbox'
-            {...register('offer')}
-            defaultChecked={product.offer}
-          />
-          <Label> Produto em oferta?</Label>
-        </ContainerInput>
-
-        <ButtonStyle type='submit'> Editar Produto </ButtonStyle>
+        <ButtonStyle type='submit'> Editar Carro </ButtonStyle>
       </form>
     </Container>
   )
 }
 
-export default EditProduct
+export default EditCar

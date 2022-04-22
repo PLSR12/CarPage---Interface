@@ -1,5 +1,5 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar'
+import AddCircleIcon from '@mui/icons-material/AddCircle'
 import paths from '../../constants/paths'
 
 const listLinks = [
@@ -7,13 +7,13 @@ const listLinks = [
     id: 1,
     label: 'Listar Carros',
     link: paths.Cars,
-    icon: ShoppingCartIcon
+    icon: DirectionsCarIcon
   },
   {
     id: 2,
     label: 'Novo Carro',
     link: paths.NewCar,
-    icon: AddShoppingCartIcon
+    icon: AddCircleIcon
   }
 ]
 

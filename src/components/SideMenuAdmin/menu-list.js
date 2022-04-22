@@ -11,7 +11,7 @@ const listLinks = [
   },
   {
     id: 2,
-    label: 'Novo Carros',
+    label: 'Novo Carro',
     link: paths.NewCar,
     icon: AddShoppingCartIcon
   }

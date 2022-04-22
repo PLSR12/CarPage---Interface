@@ -12,7 +12,7 @@ export const Container = styled.div`
   form {
     background-color: #000;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 25px;

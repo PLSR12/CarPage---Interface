@@ -49,7 +49,7 @@ function EditCar () {
     })
 
     setTimeout(() => {
-      push('/listar-carros')
+      push('/admin-carros')
     }, 2000)
   }
 

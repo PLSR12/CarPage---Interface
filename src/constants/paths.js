@@ -1,5 +1,5 @@
 const paths = {
-    Cars: '/listar-carros',
+    Cars: '/admin-carros',
     EditCar: '/editar-carro',
     NewCar: '/novo-carro'
 }

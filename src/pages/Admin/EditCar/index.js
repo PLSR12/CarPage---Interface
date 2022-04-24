@@ -78,7 +78,11 @@ function EditCar () {
     async function loadBrands () {
       const { data } = await api.get('brands')
 
-      setBrands(data)
+      let brandsCars = data.slice(0, 6)
+
+      const newBrands = [...brandsCars]
+
+      setBrands(newBrands)
     }
     loadBrands()
   }, [])

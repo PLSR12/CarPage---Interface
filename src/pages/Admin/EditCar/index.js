@@ -7,7 +7,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
 
 import api from '../../../services/api'
-import formatCurrency from '../../../utils/formatCurrency'
 
 import { ErrorMessage } from '../../../components'
 

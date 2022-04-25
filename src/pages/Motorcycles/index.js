@@ -25,7 +25,7 @@ export function Motorcycles ({ location: { state } }) {
     async function loadBrands () {
       const { data } = await api.get('brands')
 
-      let brandsMotors = data.slice(6, 9)
+      let brandsMotors = data.slice(6, 12)
 
       const newBrands = [{ id: 0, name: 'Todas' }, ...brandsMotors]
 

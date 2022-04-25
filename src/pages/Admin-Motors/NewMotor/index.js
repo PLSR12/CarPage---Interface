@@ -31,7 +31,7 @@ function NewMotors () {
     motorDataFormData.append('brand_id', data.brand.id)
     motorDataFormData.append('file', data.file[0])
 
-    await toast.promise(api.post('Motors', motorDataFormData), {
+    await toast.promise(api.post('motors', motorDataFormData), {
       success: 'Moto criada com sucesso',
       error: 'Falha ao criar a moto'
     })

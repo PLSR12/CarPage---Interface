@@ -20,7 +20,7 @@ function ListMotors () {
 
   useEffect(() => {
     async function loadMotors () {
-      const { data } = await api.get('Motors')
+      const { data } = await api.get('motors')
       setMotors(data)
     }
     loadMotors()

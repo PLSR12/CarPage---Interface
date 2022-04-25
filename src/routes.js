@@ -17,6 +17,7 @@ function AppRoutes () {
         <Route exact path={paths.Motors} component={AdminMotors} />
         <Route exact path={paths.NewMotors} component={AdminMotors} />
         <Route exact path={paths.EditMotors} component={AdminMotors} />
+        <Route exact path={paths.NewBrand} component={Admin} />
       </Switch>
     </Router>
   )

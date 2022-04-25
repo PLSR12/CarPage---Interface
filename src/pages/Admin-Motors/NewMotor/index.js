@@ -66,7 +66,7 @@ function NewMotors () {
     async function loadBrands () {
       const { data } = await api.get('brands')
 
-      let brandsMotors = data.slice(0, 6)
+      let brandsMotors = data.slice(6, 12)
 
       const newBrands = [...brandsMotors]
 

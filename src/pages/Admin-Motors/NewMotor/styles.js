@@ -3,7 +3,7 @@ import { Button } from '../../../components'
 
 export const Container = styled.div`
   display: flex;
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,9 @@ export const Container = styled.div`
     background-color: #000;
     border-radius: 10px;
     padding: 40px;
+    width:370px;
     display: flex;
+
     flex-direction: column;
     gap: 25px;
   }

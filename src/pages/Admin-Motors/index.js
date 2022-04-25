@@ -7,6 +7,7 @@ import ListMotors from './ListMotors'
 import NewMotors from './NewMotor'
 import EditMotor from './EditMotor'
 
+
 import { SideMenuAdminMotors } from '../../components'
 import paths from '../../constants/paths'
 
@@ -18,6 +19,7 @@ export function AdminMotors ({ match: { path } }) {
         {path === paths.Motors && <ListMotors />}
         {path === paths.NewMotors && <NewMotors />}
         {path === paths.EditMotors && <EditMotor />}
+
       </ContainerItems>
     </Container>
   )

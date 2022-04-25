@@ -6,18 +6,20 @@ import { Container, ContainerItems } from './styles'
 import ListCars from './ListCars'
 import NewCar from './NewCar'
 import EditCar from './EditCar'
+import NewBrand from './NewBrand'
 
-import { SideMenuAdmin } from '../../components'
+import { SideMenuAdminCars } from '../../components'
 import paths from '../../constants/paths'
 
 export function Admin ({ match: { path } }) {
   return (
     <Container>
-      <SideMenuAdmin path={path} />
+      <SideMenuAdminCars path={path} />
       <ContainerItems>
         {path === paths.Cars && <ListCars />}
         {path === paths.NewCar && <NewCar />}
         {path === paths.EditCar && <EditCar />}
+        {path === paths.NewBrand && <NewBrand />}
       </ContainerItems>
     </Container>
   )

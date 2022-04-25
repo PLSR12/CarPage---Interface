@@ -25,30 +25,30 @@ function EditMotor() {
   const {
     push,
     location: {
-      state: { car }
+      state: { moto }
     }
   } = useHistory()
 
   const onSubmit = async data => {
-    const carDataFormData = new FormData()
+    const motorDataFormData = new FormData()
 
-    carDataFormData.append('name', data.name)
-    carDataFormData.append('description', data.description)
-    carDataFormData.append('year', data.year)
-    carDataFormData.append('transmission', data.transmission)
-    carDataFormData.append('mileage', data.mileage)
-    carDataFormData.append('fuel', data.fuel)
-    carDataFormData.append('price', data.price)
-    carDataFormData.append('brand_id', data.brand.id)
-    carDataFormData.append('file', data.file[0])
+    motorDataFormData.append('name', data.name)
+    motorDataFormData.append('description', data.description)
+    motorDataFormData.append('year', data.year)
+    motorDataFormData.append('transmission', data.transmission)
+    motorDataFormData.append('mileage', data.mileage)
+    motorDataFormData.append('fuel', data.fuel)
+    motorDataFormData.append('price', data.price)
+    motorDataFormData.append('brand_id', data.brand.id)
+    motorDataFormData.append('file', data.file[0])
 
-    await toast.promise(api.put(`cars/${car.id}`, carDataFormData), {
-      success: 'Carro criado com sucesso',
-      error: 'Falha ao criar o carro'
+    await toast.promise(api.put(`motors/${moto.id}`, motorDataFormData), {
+      success: 'Moto editada com sucesso',
+      error: 'Falha ao editar a moto'
     })
 
     setTimeout(() => {
-      push('/admin-carros')
+      push('/admin-motos')
     }, 2000)
   }
 
@@ -77,9 +77,9 @@ function EditMotor() {
     async function loadBrands () {
       const { data } = await api.get('brands')
 
-      let brandsCars = data.slice(0, 6)
+      let brandsMotors = data.slice(6, 12)
 
-      const newBrands = [...brandsCars]
+      const newBrands = [...brandsMotors]
 
       setBrands(newBrands)
     }
@@ -91,14 +91,14 @@ function EditMotor() {
       <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Label>Nome:</Label>
-          <Input type='text' defaultValue={car.name} {...register('name')} />
+          <Input type='text' defaultValue={moto.name} {...register('name')} />
           <ErrorMessage>{errors.name?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Descrição:</Label>
           <Input
             type='text'
-            defaultValue={car.description}
+            defaultValue={moto.description}
             {...register('description')}
           />
           <ErrorMessage>{errors.description?.message}</ErrorMessage>
@@ -107,35 +107,35 @@ function EditMotor() {
           <Label>Câmbio:</Label>
           <Input
             type='text'
-            defaultValue={car.transmission}
+            defaultValue={moto.transmission}
             {...register('transmission')}
           />
           <ErrorMessage>{errors.transmission?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Ano:</Label>
-          <Input type='text' defaultValue={car.year} {...register('year')} />
+          <Input type='text' defaultValue={moto.year} {...register('year')} />
           <ErrorMessage>{errors.year?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Quilometragem:</Label>
           <Input
             type='text'
-            defaultValue={car.mileage}
+            defaultValue={moto.mileage}
             {...register('mileage')}
           />
           <ErrorMessage>{errors.mileage?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Combustível:</Label>
-          <Input type='text' defaultValue={car.fuel} {...register('fuel')} />
+          <Input type='text' defaultValue={moto.fuel} {...register('fuel')} />
           <ErrorMessage>{errors.fuel?.message}</ErrorMessage>
         </div>
         <div>
           <Label> Preço </Label>
           <Input
             type='number'
-            defaultValue={car.price}
+            defaultValue={moto.price}
             {...register('price')}
           />
           <ErrorMessage>{errors.price?.message}</ErrorMessage>
@@ -170,7 +170,7 @@ function EditMotor() {
                   getOptionLabel={brd => brd.name}
                   getOptionValue={brd => brd.id}
                   placeholder='Escolha uma marca'
-                  defaultValue={car.brand}
+                  defaultValue={moto.brand}
                 />
               )
             }}

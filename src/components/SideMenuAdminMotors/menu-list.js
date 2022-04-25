@@ -12,7 +12,7 @@ const listLinks = [
   {
     id: 2,
     label: 'Nova Moto',
-    link: paths.NewMotor,
+    link: paths.NewMotors,
     icon: AddCircleIcon
   }
 ]

@@ -13,31 +13,31 @@ import { ErrorMessage } from '../../../components'
 
 import { Container, Label, Input, ButtonStyle, LabelUpload } from './styles'
 
-function NewCar () {
+function NewMotors () {
   const [fileName, setFileName] = useState(null)
   const [brands, setBrands] = useState([])
   const { push } = useHistory()
 
   const onSubmit = async data => {
-    const carDataFormData = new FormData()
+    const motorDataFormData = new FormData()
 
-    carDataFormData.append('name', data.name)
-    carDataFormData.append('description', data.description)
-    carDataFormData.append('year', data.year)
-    carDataFormData.append('transmission', data.transmission)
-    carDataFormData.append('mileage', data.mileage)
-    carDataFormData.append('fuel', data.fuel)
-    carDataFormData.append('price', data.price)
-    carDataFormData.append('brand_id', data.brand.id)
-    carDataFormData.append('file', data.file[0])
+    motorDataFormData.append('name', data.name)
+    motorDataFormData.append('description', data.description)
+    motorDataFormData.append('year', data.year)
+    motorDataFormData.append('transmission', data.transmission)
+    motorDataFormData.append('mileage', data.mileage)
+    motorDataFormData.append('fuel', data.fuel)
+    motorDataFormData.append('price', data.price)
+    motorDataFormData.append('brand_id', data.brand.id)
+    motorDataFormData.append('file', data.file[0])
 
-    await toast.promise(api.post('cars', carDataFormData), {
-      success: 'Carro criado com sucesso',
-      error: 'Falha ao criar o carro'
+    await toast.promise(api.post('Motors', motorDataFormData), {
+      success: 'Moto criada com sucesso',
+      error: 'Falha ao criar a moto'
     })
 
     setTimeout(() => {
-      push('/admin-carros')
+      push('/admin-motos')
     }, 2000)
   }
 
@@ -66,13 +66,15 @@ function NewCar () {
     async function loadBrands () {
       const { data } = await api.get('brands')
 
-      let brandsCars = data.slice(0, 6)
+      let brandsMotors = data.slice(0, 6)
 
-      const newBrands = [...brandsCars]
+      const newBrands = [...brandsMotors]
 
       setBrands(newBrands)
+
     }
     loadBrands()
+
   }, [])
 
   return (
@@ -138,10 +140,10 @@ function NewCar () {
             render={({ field }) => {
               return (
                 <ReactSelect
-                  {...field}
+                 {...field}
                   options={brands}
                   getOptionLabel={brd => brd.name}
-                  getOptionValue={brd => brd.id}
+                   getOptionValue={brd => brd.id}
                   placeholder='Escolha uma marca'
                 />
               )
@@ -149,10 +151,10 @@ function NewCar () {
           ></Controller>
           <ErrorMessage>{errors.brand?.message}</ErrorMessage>
         </div>
-        <ButtonStyle type='submit'> Adicionar Carro </ButtonStyle>
+        <ButtonStyle type='submit'> Adicionar Moto </ButtonStyle>
       </form>
     </Container>
   )
 }
 
-export default NewCar
+export default NewMotors

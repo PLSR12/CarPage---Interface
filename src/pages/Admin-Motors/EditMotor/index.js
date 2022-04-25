@@ -5,18 +5,29 @@ import ReactSelect from 'react-select'
 import { toast } from 'react-toastify'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
-import CloudUploadIcon from '@mui/icons-material/CloudUpload'
 
 import api from '../../../services/api'
 
 import { ErrorMessage } from '../../../components'
 
-import { Container, Label, Input, ButtonStyle, LabelUpload } from './styles'
+import {
+  Container,
+  Label,
+  Input,
+  ButtonStyle,
+  LabelUpload,
+  CloudUploadIconStyle
+} from './styles'
 
-function NewCar () {
+function EditMotor() {
   const [fileName, setFileName] = useState(null)
   const [brands, setBrands] = useState([])
-  const { push } = useHistory()
+  const {
+    push,
+    location: {
+      state: { car }
+    }
+  } = useHistory()
 
   const onSubmit = async data => {
     const carDataFormData = new FormData()
@@ -31,7 +42,7 @@ function NewCar () {
     carDataFormData.append('brand_id', data.brand.id)
     carDataFormData.append('file', data.file[0])
 
-    await toast.promise(api.post('cars', carDataFormData), {
+    await toast.promise(api.put(`cars/${car.id}`, carDataFormData), {
       success: 'Carro criado com sucesso',
       error: 'Falha ao criar o carro'
     })
@@ -80,44 +91,60 @@ function NewCar () {
       <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Label>Nome:</Label>
-          <Input type='text' {...register('name')} />
+          <Input type='text' defaultValue={car.name} {...register('name')} />
           <ErrorMessage>{errors.name?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Descrição:</Label>
-          <Input type='text' {...register('description')} />
+          <Input
+            type='text'
+            defaultValue={car.description}
+            {...register('description')}
+          />
           <ErrorMessage>{errors.description?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Câmbio:</Label>
-          <Input type='text' {...register('transmission')} />
+          <Input
+            type='text'
+            defaultValue={car.transmission}
+            {...register('transmission')}
+          />
           <ErrorMessage>{errors.transmission?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Ano:</Label>
-          <Input type='text' {...register('year')} />
+          <Input type='text' defaultValue={car.year} {...register('year')} />
           <ErrorMessage>{errors.year?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Quilometragem:</Label>
-          <Input type='text' {...register('mileage')} />
+          <Input
+            type='text'
+            defaultValue={car.mileage}
+            {...register('mileage')}
+          />
           <ErrorMessage>{errors.mileage?.message}</ErrorMessage>
         </div>
         <div>
           <Label>Combustível:</Label>
-          <Input type='text' {...register('fuel')} />
+          <Input type='text' defaultValue={car.fuel} {...register('fuel')} />
           <ErrorMessage>{errors.fuel?.message}</ErrorMessage>
         </div>
         <div>
           <Label> Preço </Label>
-          <Input type='number' {...register('price')} />
+          <Input
+            type='number'
+            defaultValue={car.price}
+            {...register('price')}
+          />
           <ErrorMessage>{errors.price?.message}</ErrorMessage>
         </div>
         <div>
           <LabelUpload>
             {fileName || (
               <>
-                <CloudUploadIcon />
+                <CloudUploadIconStyle />
                 Caregue a imagem do produto
               </>
             )}
@@ -143,16 +170,17 @@ function NewCar () {
                   getOptionLabel={brd => brd.name}
                   getOptionValue={brd => brd.id}
                   placeholder='Escolha uma marca'
+                  defaultValue={car.brand}
                 />
               )
             }}
           ></Controller>
           <ErrorMessage>{errors.brand?.message}</ErrorMessage>
         </div>
-        <ButtonStyle type='submit'> Adicionar Carro </ButtonStyle>
+        <ButtonStyle type='submit'> Editar Moto </ButtonStyle>
       </form>
     </Container>
   )
 }
 
-export default NewCar
+export default EditMotor

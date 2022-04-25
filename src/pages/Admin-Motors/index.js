@@ -13,7 +13,7 @@ import paths from '../../constants/paths'
 export function AdminMotors ({ match: { path } }) {
   return (
     <Container>
-      <SideMenuAdminMotors path={path} />
+      <SideMenuAdminMotors path={path}  />
       <ContainerItems>
         {path === paths.Motors && <ListMotors />}
         {path === paths.NewMotors && <NewMotors />}

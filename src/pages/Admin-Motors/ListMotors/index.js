@@ -28,7 +28,7 @@ function ListMotors () {
 
 
   function editMotor (moto) {
-    push(paths.EditMotor, { moto })
+    push(paths.EditMotors, { moto })
   }
 
   return (

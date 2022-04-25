@@ -43,8 +43,8 @@ function EditCar () {
     carDataFormData.append('file', data.file[0])
 
     await toast.promise(api.put(`cars/${car.id}`, carDataFormData), {
-      success: 'Carro criado com sucesso',
-      error: 'Falha ao criar o carro'
+      success: 'Carro alterado com sucesso',
+      error: 'Falha ao alterar o carro'
     })
 
     setTimeout(() => {

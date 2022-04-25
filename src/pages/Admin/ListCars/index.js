@@ -21,7 +21,6 @@ function ListCars () {
   useEffect(() => {
     async function loadCars () {
       const { data } = await api.get('Cars')
-      console.log(data)
       setCars(data)
     }
     loadCars()

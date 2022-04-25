@@ -13,6 +13,7 @@ export const Container = styled.div`
     border-radius: 10px;
     padding: 40px;
     display: flex;
+    width:370px;
     flex-direction: column;
     gap: 25px;
   }

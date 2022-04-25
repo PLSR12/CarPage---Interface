@@ -8,7 +8,7 @@ import AppRoutes from './routes'
 ReactDOM.render(
   <>
     <AppRoutes />
-    <ToastContainer autoClose={2500} theme='colored' />
+    <ToastContainer autoClose={2000} theme='colored' />
     <GlobalStyles />
   </>,
   document.getElementById('root')

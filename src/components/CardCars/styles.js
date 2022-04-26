@@ -6,7 +6,7 @@ export const ContainerCard = styled.div`
   width: 60vw;
   height: max-content;
   padding: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #cfd9e6;
   border-radius: 5px;
   margin: 0 ;
@@ -54,7 +54,7 @@ export const ContainerText = styled.div`
   div {
     display: flex;
     flex-flow: row wrap;
-    margin: 15px 0 13px;
+    margin: 20px 0 10px 0;
     gap: 10px;
   }
 `

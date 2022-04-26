@@ -1,5 +1,6 @@
 export * from './Home'
 export * from './Cars'
 export * from './Motorcycles'
+export * from './Trucks'
 export * from './Admin'
 export * from './Admin-Motors'

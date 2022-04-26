@@ -8,6 +8,11 @@ const paths = {
     Cars: '/admin-carros',
     EditCar: '/editar-carro',
     NewCar: '/novo-carro',
+
+    Trucks: '/admin-caminhoes',
+    EditTruck: '/editar-caminhao',
+    NewTruck: '/novo-caminhao', F
+
 }
 
 export  default paths

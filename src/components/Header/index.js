@@ -39,6 +39,13 @@ export function Header () {
         >
           Motos
         </PageLink>
+        <Line> </Line>
+        <PageLink
+          onClick={() => push('/caminhoes')}
+          isActive={pathname === '/caminhoes'}
+        >
+          Caminhões
+        </PageLink>
       </ContainerRight>
     </Container>
   )

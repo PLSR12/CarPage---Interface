@@ -1,18 +1,17 @@
 const paths = {
-    Motors:'/admin-motos',
-    EditMotors: '/editar-moto', 
-    NewMotors: '/nova-moto',
-    
-    NewBrand: '/nova-marca',
+  Motors: '/admin-motos',
+  EditMotors: '/editar-moto',
+  NewMotors: '/nova-moto',
 
-    Cars: '/admin-carros',
-    EditCar: '/editar-carro',
-    NewCar: '/novo-carro',
+  NewBrand: '/nova-marca',
 
-    Trucks: '/admin-caminhoes',
-    EditTruck: '/editar-caminhao',
-    NewTruck: '/novo-caminhao', F
+  Cars: '/admin-carros',
+  EditCar: '/editar-carro',
+  NewCar: '/novo-carro',
 
+  Trucks: '/admin-caminhoes',
+  EditTruck: '/editar-caminhao',
+  NewTruck: '/novo-caminhao'
 }
 
-export  default paths
+export default paths

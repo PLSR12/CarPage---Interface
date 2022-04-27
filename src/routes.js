@@ -1,7 +1,15 @@
 import React from 'react'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 
-import { Home, Cars, Motorcycles, Admin, AdminMotors, Trucks } from './pages'
+import {
+  Home,
+  Cars,
+  Motorcycles,
+  Trucks,
+  Admin,
+  AdminMotors,
+  AdminTrucks
+} from './pages'
 import paths from './constants/paths'
 
 function AppRoutes () {
@@ -18,6 +26,9 @@ function AppRoutes () {
         <Route exact path={paths.Motors} component={AdminMotors} />
         <Route exact path={paths.NewMotors} component={AdminMotors} />
         <Route exact path={paths.EditMotors} component={AdminMotors} />
+        <Route exact path={paths.Trucks} component={AdminTrucks} />
+        <Route exact path={paths.NewTruck} component={AdminTrucks} />
+        <Route exact path={paths.EditTruck} component={AdminTrucks} />
         <Route exact path={paths.NewBrand} component={Admin} />
       </Switch>
     </Router>

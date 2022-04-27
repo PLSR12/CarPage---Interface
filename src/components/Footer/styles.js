@@ -39,10 +39,17 @@ export const Container = styled.div`
     text-decoration: none;
     word-break: break-word;
     flex-wrap: wrap;
+    gap: 10px;
   }
   .redes {
     display: flex;
     justify-content: center;
+  }
+  .horario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
   }
   .redes svg {
     height: 20px;
@@ -60,5 +67,90 @@ export const Container = styled.div`
     line-height: 10px;
     word-break: break-word;
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .mais-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    .mais-info svg {
+      height: 50px;
+      width: 50px;
+    }
+    .redes {
+      display: flex;
+      justify-content: center;
+    }
+    .redes svg {
+      padding-top: 0px;
+      margin-bottom: 40px;
+      height: 20px;
+      width: 20px;
+    }
+    .caixa-text p {
+      font-size: 19px;
+      text-align: center;
+      color: #fff;
+      max-width: 400px;
+    }
+  }
+  @media (max-width: 548px) {
+    .mais-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    .mais-info svg {
+      height: 50px;
+      width: 50px;
+    }
+    .redes {
+      display: flex;
+      justify-content: center;
+    }
+    .redes svg {
+      padding-top: 0px;
+      margin-bottom: 40px;
+      height: 20px;
+      width: 20px;
+    }
+    .caixa-text p {
+      font-size: 19px;
+      text-align: center;
+      color: #fff;
+      max-width: 400px;
+    }
+  }
+  @media (max-width: 364px) {
+    .mais-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    .mais-info svg {
+      height: 50px;
+      width: 50px;
+    }
+    .redes {
+      display: flex;
+      justify-content: center;
+    }
+    .redes svg {
+      padding-top: 0px;
+      margin-bottom: 40px;
+      height: 20px;
+      width: 20px;
+    }
+    .caixa-text p {
+      font-size: 19px;
+      text-align: center;
+      color: #fff;
+      max-width: 400px;
+    }
   }
 `

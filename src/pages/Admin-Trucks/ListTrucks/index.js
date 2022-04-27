@@ -14,7 +14,7 @@ import { Container, EditIconStyles } from './styles'
 import api from '../../../services/api'
 import formatCurrency from '../../../utils/formatCurrency'
 
-function ListMotors () {
+function ListTrucks () {
   const [trucks, setTrucks] = useState([])
   const { push } = useHistory()
 
@@ -84,4 +84,4 @@ function ListMotors () {
   )
 }
 
-export default ListMotors
+export default ListTrucks

@@ -4,14 +4,19 @@ export const ContainerCard = styled.div`
   display: flex;
   width: 60vw;
   flex-flow: row wrap;
-  padding: 5px;
   background-color: #fff;
   border: 1px solid #cfd9e6;
   border-radius: 5px;
-  margin: 0 auto;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+
+  .container-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 `
 export const ContainerImage = styled.div`
   display: flex;
@@ -34,19 +39,29 @@ export const ContainerImage = styled.div`
 export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  width: 290px;
   color: #686f79;
   padding: 5px 0 0 20px;
   div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 15px 1fr;
     flex-flow: row wrap;
-    margin: 20px 0 10px 0;
-    gap: 10px;
+    margin: 15px 0 13px;
+    align-items: center;
+    padding: 10px;
+    gap: 1.5vh;
+
+    p {
+      flex-wrap: wrap;
+      font-size: 1rem;
+      color: #000000;
+    }
   }
 `
 export const MotoName = styled.p`
   flex-wrap: wrap;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  font-weight: 500;
   color: #000000;
 `
 
@@ -55,32 +70,25 @@ export const MotoDescription = styled.p`
   font-size: 1rem;
   color: #000000;
 `
-export const MotoYear = styled.p`
-  flex-wrap: wrap;
-  font-size: 1rem;
-  color: #000000;
-`
-export const MotoTrasmission = styled.p`
-  flex-wrap: wrap;
-  font-size: 1rem;
-  color: #000000;
-`
-export const MotoMileage = styled.p`
-  flex-wrap: wrap;
-  font-size: 1rem;
-  color: #000000;
-`
-
-export const MotoFuel = styled.p`
-  flex-wrap: wrap;
-  font-size: 1rem;
-  color: #000000;
-`
 export const MotoPrice = styled.p`
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 21px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
   color: #000000;
+`
+export const Line = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-left: 12%;
+  min-height: 13vw;
+  border: 0.5px solid red;
+
+  @media (max-width: 1324px) {
+    border: 0.5px solid white;
+    margin-left: -12%;
+  }
 `

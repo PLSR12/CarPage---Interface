@@ -13,15 +13,15 @@ export const ContainerInfo = styled.div`
   margin: 0 auto;
 
   h1 {
-  color: rgb(0, 0, 0);
-  font-size: 40px;
-  text-align: center;
-}
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+  }
 
-p{
+  p {
     font-size: 20px;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 20px 50px 50px 50px;
-}
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 20px 50px 50px 50px;
+  }
 `

@@ -33,7 +33,6 @@ export function Motorcycles ({ location: { state } }) {
     }
     async function loadMotorcycles () {
       const { data: allMotorcycles } = await api.get('motors')
-      console.log(allMotorcycles)
 
       const newMotorcycles = allMotorcycles.map(moto => {
         return {

@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const ContainerLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 2vh;
+  gap: 1vh;
 
   button {
     background-color: black;
@@ -33,10 +33,10 @@ export const ContainerLeft = styled.div`
 export const ContainerRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 2vh;
+  gap: 1vh;
 `
 export const PageLink = styled.a`
-  display: flex;
+  display: inline;
   align-items: center;
   cursor: pointer;
   text-decoration: none;

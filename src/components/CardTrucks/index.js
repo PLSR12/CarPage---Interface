@@ -1,5 +1,8 @@
 import React from 'react'
-
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
+import AvTimerIcon from '@mui/icons-material/AvTimer'
+import MediationIcon from '@mui/icons-material/Mediation'
 import PropTypes from 'prop-types'
 
 import {
@@ -8,11 +11,8 @@ import {
   TruckDescription,
   ContainerImage,
   ContainerText,
-  TruckYear,
-  TruckTrasmission,
-  TruckMileage,
-  TruckFuel,
-  TruckPrice
+  TruckPrice,
+  Line
 } from './styles'
 
 export function CardTrucks ({ truck }) {
@@ -25,17 +25,24 @@ export function CardTrucks ({ truck }) {
         <TruckName> {truck.name} </TruckName>
         <TruckDescription> {truck.description}</TruckDescription>
         <div>
-          <TruckYear> {truck.year}</TruckYear>
-          <TruckTrasmission> {truck.transmission} </TruckTrasmission>
-          <TruckMileage> {truck.mileage}Km </TruckMileage>
-          <TruckFuel> {truck.fuel} </TruckFuel>
+          <CalendarTodayIcon /> <p> {truck.year}</p>
+          <MediationIcon />
+          <p> {truck.transmission} </p>
+          <AvTimerIcon />
+          <p> {truck.mileage}Km </p>
+          <LocalGasStationIcon />
+          <p> {truck.fuel} </p>
         </div>
-        <TruckPrice> {truck.formatedPrice}</TruckPrice>
       </ContainerText>
+      <Line> </Line>
+
+      <div className='container-price'>
+        <TruckPrice> {truck.formatedPrice}</TruckPrice>
+      </div>
     </ContainerCard>
   )
 }
 
 CardTrucks.propTypes = {
-  car: PropTypes.object
+  truck: PropTypes.object
 }

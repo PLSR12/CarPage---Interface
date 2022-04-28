@@ -14,25 +14,26 @@ export const Container = styled.div`
 export const ContainerLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 3vh;
+  gap: 2vh;
 
-  button{
-    background-color:black;
-    outline:none;
+  button {
+    background-color: black;
+    outline: none;
     border: none;
     cursor: pointer;
-    max-width: 22vh;
+    width: 18vh;
+    min-width: 10vh;
   }
 
   img {
-    max-width: 22vh;
+    width: 18vh;
   }
 `
 
 export const ContainerRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 2vh;
+  gap: 1vh;
 `
 export const PageLink = styled.a`
   display: flex;
@@ -40,7 +41,6 @@ export const PageLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   font-size: 1rem;
-  line-height: 19px;
   color: ${props => (props.isActive ? 'red' : 'white')};
   font-weight: ${props => (props.isActive ? 'bold' : 'normal')};
 `

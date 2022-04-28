@@ -2,46 +2,32 @@ import styled from 'styled-components'
 
 export const ContainerCard = styled.div`
   display: flex;
-  flex-flow: row wrap;
   width: 60vw;
-  height: max-content;
+  flex-flow: row wrap;
   padding: 5px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #cfd9e6;
   border-radius: 5px;
-  margin: 0;
+  margin: 0 auto;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-
-  @media (min-width: 768px) {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 2px;
-    background-color: #fff;
-    border: 1px solid #cfd9e6;
-    border-radius: 5px;
-    margin: 0 auto;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
 `
 export const ContainerImage = styled.div`
+  display: flex;
   width: max-content;
   height: max-content;
   img {
     width: 20vw;
     height: 14vw;
-    min-height: 12vh;
+    min-height: max-content;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
 
-    @media (max-width: 768px) {
-      width: 28vh;
-      max-width: 38vh;
-      min-width: 20vh;
-      height: 35vw;
+    @media (max-width: 1024px) {
+      min-width: 57vw;
+      min-height: 35vw;
+      padding: 5px 5px 5px 5px;
     }
   }
 `
@@ -92,7 +78,7 @@ export const MotoFuel = styled.p`
 `
 export const MotoPrice = styled.p`
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 21px;
   margin-top: 40px;
   margin-bottom: 20px;

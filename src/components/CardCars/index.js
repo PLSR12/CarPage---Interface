@@ -1,5 +1,8 @@
 import React from 'react'
-
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
+import AvTimerIcon from '@mui/icons-material/AvTimer'
+import MediationIcon from '@mui/icons-material/Mediation'
 import PropTypes from 'prop-types'
 
 import {
@@ -8,11 +11,8 @@ import {
   CarDescription,
   ContainerImage,
   ContainerText,
-  CarYear,
-  CarTrasmission,
-  CarMileage,
-  CarFuel,
-  CarPrice
+  CarPrice,
+  Line
 } from './styles'
 
 export function CardCars ({ car }) {
@@ -25,13 +25,20 @@ export function CardCars ({ car }) {
         <CarName> {car.name} </CarName>
         <CarDescription> {car.description}</CarDescription>
         <div>
-          <CarYear> {car.year}</CarYear>
-          <CarTrasmission> {car.transmission} </CarTrasmission>
-          <CarMileage> {car.mileage}Km </CarMileage>
-          <CarFuel> {car.fuel} </CarFuel>
+          <CalendarTodayIcon /> <p> {car.year}</p>
+          <MediationIcon />
+          <p> {car.transmission} </p>
+          <AvTimerIcon />
+          <p> {car.mileage}Km </p>
+          <LocalGasStationIcon />
+          <p> {car.fuel} </p>
         </div>
-        <CarPrice> {car.formatedPrice}</CarPrice>
       </ContainerText>
+      <Line> </Line>
+
+      <div className='container-price'>
+        <CarPrice> {car.formatedPrice}</CarPrice>
+      </div>
     </ContainerCard>
   )
 }

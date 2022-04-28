@@ -151,7 +151,7 @@ function NewTrucks () {
           ></Controller>
           <ErrorMessage>{errors.brand?.message}</ErrorMessage>
         </div>
-        <ButtonStyle type='submit'> Adicionar Moto </ButtonStyle>
+        <ButtonStyle type='submit'> Adicionar Caminhão </ButtonStyle>
       </form>
     </Container>
   )

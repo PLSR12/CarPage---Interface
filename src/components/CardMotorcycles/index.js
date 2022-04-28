@@ -1,4 +1,8 @@
 import React from 'react'
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
+import AvTimerIcon from '@mui/icons-material/AvTimer'
+import MediationIcon from '@mui/icons-material/Mediation'
 
 import PropTypes from 'prop-types'
 
@@ -8,11 +12,8 @@ import {
   MotoDescription,
   ContainerImage,
   ContainerText,
-  MotoYear,
-  MotoTrasmission,
-  MotoMileage,
-  MotoFuel,
-  MotoPrice
+  MotoPrice,
+  Line
 } from './styles'
 
 export function CardMotorcycles ({ moto }) {
@@ -25,13 +26,20 @@ export function CardMotorcycles ({ moto }) {
         <MotoName> {moto.name} </MotoName>
         <MotoDescription> {moto.description}</MotoDescription>
         <div>
-          <MotoYear> {moto.year}</MotoYear>
-          <MotoTrasmission> {moto.transmission} </MotoTrasmission>
-          <MotoMileage> {moto.mileage}Km </MotoMileage>
-          <MotoFuel> {moto.fuel} </MotoFuel>
+          <CalendarTodayIcon /> <p> {moto.year}</p>
+          <MediationIcon />
+          <p> {moto.transmission} </p>
+          <AvTimerIcon />
+          <p> {moto.mileage}Km </p>
+          <LocalGasStationIcon />
+          <p> {moto.fuel} </p>
         </div>
-        <MotoPrice> {moto.formatedPrice}</MotoPrice>
       </ContainerText>
+      <Line> </Line>
+
+      <div className='container-price'>
+        <MotoPrice> {moto.formatedPrice}</MotoPrice>
+      </div>
     </ContainerCard>
   )
 }

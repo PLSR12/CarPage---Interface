@@ -5,6 +5,8 @@ import AvTimerIcon from '@mui/icons-material/AvTimer'
 import MediationIcon from '@mui/icons-material/Mediation'
 import PropTypes from 'prop-types'
 
+import { Button } from '../../components'
+
 import {
   ContainerCard,
   CarName,
@@ -38,6 +40,7 @@ export function CardCars ({ car }) {
 
       <div className='container-price'>
         <CarPrice> {car.formatedPrice}</CarPrice>
+        <Button style={{marginBottom:20}}> Comprar Já </Button>
       </div>
     </ContainerCard>
   )

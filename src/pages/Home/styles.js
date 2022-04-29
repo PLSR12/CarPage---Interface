@@ -7,7 +7,7 @@ export const Container = styled.div`
 `
 export const ContainerInfo = styled.div`
   display: flex;
-  background-color: #eef3f8;
+  background-color: #fff;
   flex-flow: column wrap;
   padding-top: 40px;
   margin: 0 auto;

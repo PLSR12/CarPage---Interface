@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container, ContainerInfo } from './styles'
 
-import { Header, Banner, Footer } from '../../components'
+import { Header, Banner, Footer,VehiclesCarrousel } from '../../components'
 
 export function Home () {
   return (
@@ -33,6 +33,7 @@ export function Home () {
           mais rápido e da melhor forma possível.
         </p>
       </ContainerInfo>
+      <VehiclesCarrousel/>
       <Footer />
     </Container>
   )

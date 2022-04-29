@@ -3,7 +3,10 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
 import AvTimerIcon from '@mui/icons-material/AvTimer'
 import MediationIcon from '@mui/icons-material/Mediation'
+
 import PropTypes from 'prop-types'
+
+import { Button } from '../../components'
 
 import {
   ContainerCard,
@@ -38,6 +41,7 @@ export function CardTrucks ({ truck }) {
 
       <div className='container-price'>
         <TruckPrice> {truck.formatedPrice}</TruckPrice>
+        <Button style={{ marginBottom: 20 }}> Comprar Já </Button>
       </div>
     </ContainerCard>
   )

@@ -4,6 +4,8 @@ import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
 import AvTimerIcon from '@mui/icons-material/AvTimer'
 import MediationIcon from '@mui/icons-material/Mediation'
 
+import { Button } from '../../components'
+
 import PropTypes from 'prop-types'
 
 import {
@@ -39,6 +41,7 @@ export function CardMotorcycles ({ moto }) {
 
       <div className='container-price'>
         <MotoPrice> {moto.formatedPrice}</MotoPrice>
+        <Button style={{ marginBottom: 20 }}> Comprar Já </Button>
       </div>
     </ContainerCard>
   )

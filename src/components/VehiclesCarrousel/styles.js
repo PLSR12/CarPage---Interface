@@ -24,22 +24,18 @@ export const Container = styled.div`
   .rec.rec-arrow:hover {
     border: 2px solid red;
     background-color: #000;
-    color: red;
+    color: white;
   }
 
   .rec.rec-arrow:disabled {
     border: none;
     color: #000;
   }
-  .hRnmDL {
+  .rec.rec-dot {
     background-color: #fff;
     box-shadow: 0 0 1px 3px #fff;
   }
-  .hyYnkC {
-    background-color: #fff;
-    box-shadow: 0 0 1px 3px #fff;
-  }
-  .fexzrp {
+  .rec.rec-dot:active {
     background-color: #fff;
     box-shadow: 0 0 1px 3px #fff;
   }
@@ -48,6 +44,7 @@ export const ContainerItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
 
 export const Image = styled.img`

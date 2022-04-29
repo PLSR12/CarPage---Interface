@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import {
-  Container,
-  ContainerItems,
-  Image,
-} from './styles'
+import { Container, ContainerItems, Image } from './styles'
 
 import Carousel from 'react-elastic-carousel'
 
@@ -14,7 +10,7 @@ export function VehiclesCarrousel () {
   const [brands, setBrands] = useState([])
 
   useEffect(() => {
-    async function loadBrands() {
+    async function loadBrands () {
       const { data } = await api.get('brands')
 
       setBrands(data)
@@ -43,8 +39,7 @@ export function VehiclesCarrousel () {
         {brands &&
           brands.map(brands => (
             <ContainerItems key={brands.id}>
-              <Image src={brands.url} alt='foto da categoria' />
-              
+              <Image src={brands.url} alt='foto da marca' />
             </ContainerItems>
           ))}
       </Carousel>

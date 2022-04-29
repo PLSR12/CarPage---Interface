@@ -14,6 +14,7 @@ export const ContainerCard = styled.div`
   .container-price {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: auto;
   }

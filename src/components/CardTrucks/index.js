@@ -32,7 +32,7 @@ export function CardTrucks ({ truck }) {
           <MediationIcon />
           <p> {truck.transmission} </p>
           <AvTimerIcon />
-          <p> {truck.mileage}Km </p>
+          <p> {truck.mileage} Km </p>
           <LocalGasStationIcon />
           <p> {truck.fuel} </p>
         </div>

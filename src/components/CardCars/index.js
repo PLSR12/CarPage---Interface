@@ -31,7 +31,7 @@ export function CardCars ({ car }) {
           <MediationIcon />
           <p> {car.transmission} </p>
           <AvTimerIcon />
-          <p> {car.mileage}Km </p>
+          <p> {car.mileage} Km </p>
           <LocalGasStationIcon />
           <p> {car.fuel} </p>
         </div>

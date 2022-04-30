@@ -32,7 +32,7 @@ export function CardMotorcycles ({ moto }) {
           <MediationIcon />
           <p> {moto.transmission} </p>
           <AvTimerIcon />
-          <p> {moto.mileage}Km </p>
+          <p> {moto.mileage} Km </p>
           <LocalGasStationIcon />
           <p> {moto.fuel} </p>
         </div>

@@ -34,10 +34,12 @@ export const Container = styled.div`
   .rec.rec-dot {
     background-color: #fff;
     box-shadow: 0 0 1px 3px #fff;
+    cursor:none;
   }
   .rec.rec-dot:active {
     background-color: #fff;
     box-shadow: 0 0 1px 3px #fff;
+    cursor:none;
   }
 `
 export const ContainerItems = styled.div`

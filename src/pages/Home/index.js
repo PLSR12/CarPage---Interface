@@ -2,7 +2,13 @@ import React from 'react'
 
 import { Container, ContainerInfo } from './styles'
 
-import { Header, Banner, Footer,VehiclesCarrousel } from '../../components'
+import {
+  Header,
+  Banner,
+  Footer,
+  VehiclesCarrousel,
+  SimpleAccordion
+} from '../../components'
 
 export function Home () {
   return (
@@ -23,17 +29,18 @@ export function Home () {
           cliente será a de privilegiar cada vez mais quem lhe oferecer produtos
           e serviços 24 horas por dia, mantendo-o na comodidade e segurança de
           sua empresa ou de seu lar, livre dos congestionamentos, da violência
-          urbana, das filas e de outros inconvenientes da vida moderna.
-           A Internet proporciona tudo isso e a SuperCarros.com.br quer ampliar ainda
-          mais suas fronteiras digitais. Somos uma equipe altamente qualificada
-          composta por dezenas de profissionais nas áreas de Programação,
-          Design, Prospecção, Atendimento ao Cliente, Web Business, Marketing e
-          Gestão Empresarial. Nosso objetivo é levar a praticidade para dentro
-          de sua casa ou trabalho, para que seus sonhos e projetos se realizem
-          mais rápido e da melhor forma possível.
+          urbana, das filas e de outros inconvenientes da vida moderna. A
+          Internet proporciona tudo isso e a SuperCarros.com.br quer ampliar
+          ainda mais suas fronteiras digitais. Somos uma equipe altamente
+          qualificada composta por dezenas de profissionais nas áreas de
+          Programação, Design, Prospecção, Atendimento ao Cliente, Web Business,
+          Marketing e Gestão Empresarial. Nosso objetivo é levar a praticidade
+          para dentro de sua casa ou trabalho, para que seus sonhos e projetos
+          se realizem mais rápido e da melhor forma possível.
         </p>
       </ContainerInfo>
-      <VehiclesCarrousel/>
+      <SimpleAccordion />
+      <VehiclesCarrousel />
       <Footer />
     </Container>
   )

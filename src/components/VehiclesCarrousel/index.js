@@ -29,7 +29,7 @@ export function VehiclesCarrousel () {
 
   return (
     <Container>
-      <h1> Nossas Parceiras </h1>
+      <h1> Nossos Parceiros </h1>
 
       <Carousel
         itemsToShow={4}

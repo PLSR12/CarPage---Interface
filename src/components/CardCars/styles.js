@@ -40,15 +40,14 @@ export const ContainerImage = styled.div`
 export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 250px;
   color: #686f79;
-  padding: 5px 0 0 20px;
+  padding: 10px 0 0 15px;
   div {
     display: grid;
     grid-template-columns: 15px 1fr;
-    justify-content: center;
+    justify-content: space-around;
     flex-flow: row wrap;
-    margin: 15px 0 13px;
     align-items: center;
     padding: 10px;
     gap: 1.5vh;
@@ -76,7 +75,6 @@ export const CarDescription = styled.p`
 export const CarPrice = styled.p`
   font-weight: 600;
   font-size: 1.5rem;
-  line-height: 21px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #000000;
@@ -84,10 +82,8 @@ export const CarPrice = styled.p`
 
 export const Line = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-left: 20%;
+  margin:  auto;
+  margin-left: 15%;
   min-height: 13vw;
   border: 0.5px solid red;
 

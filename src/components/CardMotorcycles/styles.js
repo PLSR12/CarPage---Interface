@@ -47,7 +47,6 @@ export const ContainerText = styled.div`
     display: grid;
     grid-template-columns: 15px 1fr;
     flex-flow: row wrap;
-    margin: 15px 0 13px;
     align-items: center;
     padding: 10px;
     gap: 1.5vh;
@@ -60,7 +59,7 @@ export const ContainerText = styled.div`
   }
 `
 export const MotoName = styled.p`
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   font-size: 1.7rem;
   font-weight: 500;
   color: #000000;
@@ -72,9 +71,8 @@ export const MotoDescription = styled.p`
   color: #000000;
 `
 export const MotoPrice = styled.p`
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 21px;
+  font-weight: 600;
+  font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #000000;

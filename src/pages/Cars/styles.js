@@ -22,7 +22,6 @@ export const BrandButton = styled.button`
   border-bottom: ${props => props.isActiveBrand && '2px solid red'};
   color: ${props => (props.isActiveBrand ? 'red' : '#000')};
   font-size: 1rem;
-  line-height: 22px;
 `
 
 

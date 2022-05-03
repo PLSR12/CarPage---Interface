@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ComponentButton = styled.button`
-  min-width: 15vh;
+  min-width: 18vh;
   height: 5vh;
   background: red;
   border-radius: 15px;

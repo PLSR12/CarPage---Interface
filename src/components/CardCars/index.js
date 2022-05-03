@@ -40,7 +40,7 @@ export function CardCars ({ car }) {
 
       <div className='container-price'>
         <CarPrice> {car.formatedPrice}</CarPrice>
-        <Button style={{marginBottom:20}}> Comprar Já </Button>
+        <Button style={{marginBottom:20}}> Agendar Test-Drive </Button>
       </div>
     </ContainerCard>
   )

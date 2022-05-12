@@ -8,8 +8,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 19vw;
-  margin-top: 0;
-  margin-left: 0;
+  min-height: 100vh;
+  margin: 0 0;
 
   hr {
     margin: 50px 15px;
@@ -17,12 +17,12 @@ export const Container = styled.div`
   button {
     background-color: black;
     padding: 40px;
-    margin-top:10px;
+    margin-top: 10px;
     outline: none;
     border: none;
     cursor: pointer;
     width: 30vh;
-    height:20vh;
+    height: 20vh;
   }
 
   img {

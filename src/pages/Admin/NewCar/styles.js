@@ -13,9 +13,20 @@ export const Container = styled.div`
     border-radius: 10px;
     padding: 40px;
     display: flex;
-    width:370px;
+    width: 370px;
     flex-direction: column;
     gap: 25px;
+  }
+  textarea {
+    min-width: 100%;
+    min-height: 40px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
   }
 `
 export const Label = styled.p`

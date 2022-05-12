@@ -12,11 +12,22 @@ export const Container = styled.div`
     background-color: #000;
     border-radius: 10px;
     padding: 50px;
-    width:370px;
+    width: 370px;
     display: flex;
 
     flex-direction: column;
     gap: 25px;
+  }
+  textarea {
+    min-width: 100%;
+    min-height: 40px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
   }
 `
 export const Label = styled.p`

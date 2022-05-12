@@ -96,7 +96,7 @@ function EditTruck () {
         </div>
         <div>
           <Label>Descrição:</Label>
-          <Input
+          <textarea
             type='text'
             defaultValue={truck.description}
             {...register('description')}

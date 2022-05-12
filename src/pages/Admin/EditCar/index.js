@@ -96,7 +96,7 @@ function EditCar () {
         </div>
         <div>
           <Label>Descrição:</Label>
-          <Input
+          <textarea
             type='text'
             defaultValue={car.description}
             {...register('description')}

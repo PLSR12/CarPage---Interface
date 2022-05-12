@@ -96,7 +96,7 @@ function EditMotor() {
         </div>
         <div>
           <Label>Descrição:</Label>
-          <Input
+          <textarea
             type='text'
             defaultValue={moto.description}
             {...register('description')}

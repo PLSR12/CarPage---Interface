@@ -87,7 +87,7 @@ function NewTrucks () {
         </div>
         <div>
           <Label>Descrição:</Label>
-          <Input type='text' {...register('description')} />
+          <textarea type='text' {...register('description')} />
           <ErrorMessage>{errors.description?.message}</ErrorMessage>
         </div>
         <div>
